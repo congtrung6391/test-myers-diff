@@ -6,6 +6,8 @@ int chunk (int a) {
     return null;
   }
 
+  int x = 2;
+
   if (a != 1) 
   {
     return 1;
