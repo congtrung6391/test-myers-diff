@@ -1,13 +1,12 @@
-int chunk (int a) {
+public static ImageIcon getImageIcon(String path) {
+  java.net.URL imgUrl = GuilImporter.class.getResource(path);
 
-  int x = 2;
-
-  if (a == 1) 
+  if (imgUrl != null) 
   {
-    return 1;
+    return new ImageIcon(imgUrl);
   }
   else {
-    cout << 1;
+    log.error("Couldn't find icon: " + imgUrl);
   }
     return null;
 }
