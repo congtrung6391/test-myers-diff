@@ -1,17 +1,25 @@
-public static ImageIcon getImageIcon(String path) {
-  if (path == null) 
-  {
-    log.error("Icon path is null");
-    return null;
-  }
+#include <stdio.h>
 
-  java.net.URL imgUrl = GuilImporter.class.getResource(path);
+int fib(int n)
+{
+    if(n > 2)
+    {
+        return fib(n-1) + fib(n-2);
+    }
+    return 1;
+}
 
-  if (imgUrl == null) 
-  {
-    log.error("Couldn't find icon: " + imgUrl);
-    return null;
-  }
-  else 
-    return new ImageIcon(imgUrl);
+// Frobs foo heartily
+int frobnitz(int foo)
+{
+    int i;
+    for(i = 0; i < 10; i++)
+    {
+        printf("%d\n", foo);
+    }
+}
+
+int main(int argc, char **argv)
+{
+    frobnitz(fib(10));
 }
