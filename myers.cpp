@@ -6,7 +6,7 @@ int chunk (int a) {
     return null;
   }
 
-  if (a == 1) 
+  if (a != 1) 
   {
     return 1;
     return null;
